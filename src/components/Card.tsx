@@ -20,7 +20,14 @@ const Card = ({ children, className = '', hover = true, padding = 'md' }: CardPr
   return (
     <motion.div
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 ${paddingClasses[padding]} ${className}`}
-      whileHover={hover ? { y: -4, shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' } : {}}
+      whileHover={
+        hover
+         ? { y: -4,
+           boxShadow:
+            '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' ,
+          }
+          : {}
+        }
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
       {children}
