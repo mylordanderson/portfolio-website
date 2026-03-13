@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Code, Palette, Zap } from 'lucide-react';
+import { ArrowDown, Code, Palette, Zap, Github, Linkedin, Mail } from 'lucide-react';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import ProjectCard from '@/components/ProjectCard';
@@ -74,23 +74,25 @@ export default function Home() {
         id="home"
         className="min-h-screen flex items-center justify-center relative z-10 px-6"
       >
-        
         <div className="text-center max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-200 via-cyan-100 to-white bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]">
-              Welcome to Gadget Galaxy
+            <h1 className="text-5xl font-bold">
+              Hi, I'm <span className="text-blue-400">Anderson Ghany</span>
             </h1>
-            <p className="text-2xl text-blue-200 mb-8">
-              Programmer & AI Enthusiast
-            </p>
-            <p className="text-lg md:text-xl text-blue-100/90 max-w-xl mx-auto text-center leading-relaxed">
-              I'm learning to build with <span className="text-blue-400 font-semibold">AI</span> and <span className="text-blue-400 font-semibold">Next.js</span>, creating innovative solutions that bridge the gap between artificial intelligence and modern web development. Passionate about exploring the future of technology and building applications that make a real impact.
+
+            <p className="text-xl mt-4 text-gray-300">
+              AI Developer & Next.js Engineer building intelligent web applications.
             </p>
 
+            <p className="max-w-xl mt-4 text-gray-400">
+              I specialize in modern web development and AI integration,
+              creating fast, scalable, and smart digital experiences.
+            </p>
+     
           </motion.div>
 
           <motion.div
@@ -115,7 +117,19 @@ export default function Home() {
               Get In Touch
             </Button>
           </motion.div>
+          <div className="flex justify-center gap-6 mt-8 text-blue-300">
+           <a href="https://github.com" target="_blank" className="hover:text-white transition">
+              <Github size={26} />
+          </a>
 
+          <a href="https://linkedin.com" target="_blank" className="hover:text-white transition">
+            <Linkedin size={26} />
+            </a>
+
+            <a href="mailto:your@email.com" className="hover:text-white transition">
+          <Mail size={26} />
+          </a>
+              </div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -123,7 +137,7 @@ export default function Home() {
             className="mt-16"
           >
             <a
-              href="#about"
+              href="/about"
               className="inline-flex items-center text-blue-200 hover:text-white transition-all duration-300 hover:scale-105 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10 hover:bg-white/10"
             >
               <span className="mr-2 font-medium">Scroll to learn more</span>
@@ -131,6 +145,7 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
+  
       </section>
 
       {/* About Section */}
@@ -175,7 +190,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Tech Stack */}
+      <section className="py-24 relative z-10">
+        <div className="container mx-auto px-6 text-center">
 
+          <h2 className="text-4xl md:text-5xl font-bold mb-10">
+            My <span className="text-blue-400">Tech Stack</span>
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+
+            {[
+              "Next.js",
+              "React",
+              "TypeScript",
+              "Tailwind CSS",
+              "Node.js",
+              "Python",
+              "OpenAI API",
+              "MongoDB"
+            ].map((tech) => (
+              <div
+                key={tech}
+                className="bg-gray-800/60 border border-blue-900/40 rounded-xl py-4 font-semibold hover:scale-105 transition"
+              >
+                {tech}
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
       {/* Featured Projects */}
       <section id="projects" className="py-24 relative z-10">
         <div className="container mx-auto px-6 text-center">
@@ -254,7 +300,9 @@ export default function Home() {
         >
           Start a Conversation
         </Button>
-      </section>
+      </section> 
     </div>
+
+     
   );
 }

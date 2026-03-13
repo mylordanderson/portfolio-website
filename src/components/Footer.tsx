@@ -11,7 +11,7 @@ const Footer = () => {
     { name: 'GitHub', href: 'https://github.com/andersonghany', icon: Github, color: 'hover:text-gray-900 dark:hover:text-white' },
     { name: 'LinkedIn', href: 'https://linkedin.com/in/andersonghany', icon: Linkedin, color: 'hover:text-blue-600' },
     { name: 'Twitter', href: 'https://twitter.com/andersonghany', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Email', href: 'mailto:anderson.ghany@example.com', icon: Mail, color: 'hover:text-red-500' },
+    { name: 'Email', href: 'mailto:mylordanderson3@gmail.com', icon: Mail, color: 'hover:text-red-500' },
   ];
 
   const footerLinks = [
